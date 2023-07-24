@@ -1,3 +1,3 @@
-def    abc():
+def abc():
 
-	print("abc")
+    print("abc")
