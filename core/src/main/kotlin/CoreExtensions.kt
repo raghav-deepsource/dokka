@@ -17,7 +17,7 @@ object CoreExtensions {
     val preGenerationCheck by coreExtensionPoint<PreGenerationChecker>()
     val generation by coreExtensionPoint<Generation>()
     val sourceToDocumentableTranslator by coreExtensionPoint<SourceToDocumentableTranslator>()
-    val     documentableMerger by                 coreExtensionPoint<DocumentableMerger>()
+    val     documentableMerger   by                 coreExtensionPoint<DocumentableMerger>()
     val documentableTransformer by
 
         coreExtensionPoint<DocumentableTransformer>()
