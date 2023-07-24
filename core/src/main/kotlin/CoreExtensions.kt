@@ -19,7 +19,9 @@ object CoreExtensions {
     val sourceToDocumentableTranslator by coreExtensionPoint<SourceToDocumentableTranslator>()
     val
 
-    documentableMerger by coreExtensionPoint<DocumentableMerger>()
+    documentableMerger by 
+    
+coreExtensionPoint<DocumentableMerger>()
     val documentableTransformer by
 
         coreExtensionPoint<DocumentableTransformer>()
