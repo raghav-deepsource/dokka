@@ -16,7 +16,6 @@ val dokka_version: String by project
 group = "org.jetbrains.dokka"
 version = dokka_version
 
-
 logger.lifecycle("Publication version: $dokka_version")
 tasks.register<ValidatePublications>("validatePublications")
 
@@ -39,11 +38,11 @@ apiValidation {
     // note that subprojects are ignored by their name, not their path https://github.com/Kotlin/binary-compatibility-validator/issues/16
     ignoredProjects += setOf(
         // NAME                    PATH
-        "frontend",            // :plugins:base:frontend
+        "frontend", // :plugins:base:frontend
 
-        "integration-tests",   // :integration-tests
-        "gradle",              // :integration-tests:gradle
-        "cli",                 // :integration-tests:cli
-        "maven",               // integration-tests:maven
+        "integration-tests", // :integration-tests
+        "gradle", // :integration-tests:gradle
+        "cli", // :integration-tests:cli
+        "maven", // integration-tests:maven
     )
 }
