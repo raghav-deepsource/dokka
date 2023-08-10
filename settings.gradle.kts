@@ -101,8 +101,6 @@ include(
 
 val isCiBuild = System.getenv("GITHUB_ACTIONS") != null || System.getenv("TEAMCITY_VERSION") != null
 
-
-
 gradleEnterprise {
     buildScan {
         termsOfServiceUrl = "https://gradle.com/terms-of-service"
@@ -110,6 +108,5 @@ gradleEnterprise {
         publishAlwaysIf(isCiBuild)
     }
 }
-
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")

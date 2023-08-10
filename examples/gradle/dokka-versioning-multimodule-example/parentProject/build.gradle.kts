@@ -1,6 +1,5 @@
-import org.jetbrains.dokka.gradle.DokkaMultiModuleTask
-import org.jetbrains.dokka.versioning.VersioningPlugin
 import org.jetbrains.dokka.versioning.VersioningConfiguration
+import org.jetbrains.dokka.versioning.VersioningPlugin
 
 buildscript {
     dependencies {
