@@ -1,8 +1,7 @@
+import org.jetbrains.dokka.DokkaConfiguration
+import org.jetbrains.dokka.base.DokkaBase
 import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.dokka.gradle.kotlinSourceSet
-import org.jetbrains.dokka.base.DokkaBase
-import org.jetbrains.dokka.base.DokkaBaseConfiguration
-import org.jetbrains.dokka.DokkaConfiguration
 import java.net.URL
 
 plugins {
@@ -29,7 +28,7 @@ tasks.withType<DokkaTask> {
     dokkaSourceSets {
         configureEach {
             documentedVisibilities.set(
-                setOf(DokkaConfiguration.Visibility.PUBLIC, DokkaConfiguration.Visibility.PROTECTED)
+                setOf(DokkaConfiguration.Visibility.PUBLIC, DokkaConfiguration.Visibility.PROTECTED),
             )
             suppressedFiles.from(file("src/main/kotlin/it/suppressedByPath"))
             perPackageOption {
@@ -39,7 +38,7 @@ tasks.withType<DokkaTask> {
             perPackageOption {
                 matchingRegex.set("it.overriddenVisibility.*")
                 documentedVisibilities.set(
-                    setOf(DokkaConfiguration.Visibility.PRIVATE)
+                    setOf(DokkaConfiguration.Visibility.PRIVATE),
                 )
             }
             sourceLink {
@@ -47,8 +46,8 @@ tasks.withType<DokkaTask> {
                 remoteUrl.set(
                     URL(
                         "https://github.com/Kotlin/dokka/tree/master/" +
-                                "integration-tests/gradle/projects/it-basic/src/main"
-                    )
+                            "integration-tests/gradle/projects/it-basic/src/main",
+                    ),
                 )
             }
         }
