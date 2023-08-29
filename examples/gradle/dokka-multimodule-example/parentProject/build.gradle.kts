@@ -14,10 +14,12 @@ subprojects {
 
     tasks.withType<DokkaTaskPartial>().configureEach {
         dokkaSourceSets.configureEach {
-            documentedVisibilities.set(setOf(
-                Visibility.PUBLIC,
-                Visibility.PROTECTED
-            ))
+            documentedVisibilities.set(
+                setOf(
+                    Visibility.PUBLIC,
+                    Visibility.PROTECTED,
+                ),
+            )
 
             // Read docs for more details: https://kotlinlang.org/docs/dokka-gradle.html#source-link-configuration
             sourceLink {

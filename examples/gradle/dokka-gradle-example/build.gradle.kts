@@ -27,9 +27,12 @@ tasks.withType<DokkaTask>().configureEach {
             // to easily find source code for inspected declarations
             sourceLink {
                 localDirectory.set(file("src/main/kotlin"))
-                remoteUrl.set(URL("https://github.com/Kotlin/dokka/tree/master/" +
-                        "examples/gradle/dokka-gradle-example/src/main/kotlin"
-                ))
+                remoteUrl.set(
+                    URL(
+                        "https://github.com/Kotlin/dokka/tree/master/" +
+                            "examples/gradle/dokka-gradle-example/src/main/kotlin",
+                    ),
+                )
                 remoteLineSuffix.set("#L")
             }
         }
