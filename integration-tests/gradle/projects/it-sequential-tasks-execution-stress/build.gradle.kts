@@ -1,9 +1,4 @@
 import org.jetbrains.dokka.gradle.DokkaTask
-import org.jetbrains.dokka.gradle.kotlinSourceSet
-import org.jetbrains.dokka.base.DokkaBase
-import org.jetbrains.dokka.base.DokkaBaseConfiguration
-import org.jetbrains.dokka.DokkaConfiguration
-import java.net.URL
 
 plugins {
     kotlin("jvm")
@@ -34,7 +29,7 @@ fun createTask(name: String) {
 task("runTasks") {
     val taskNumber = (properties["task_number"] as String).toInt()
     repeat(taskNumber) { i ->
-        createTask("task_"+i)
-        dependsOn ("task_"+i)
+        createTask("task_" + i)
+        dependsOn("task_" + i)
     }
 }
