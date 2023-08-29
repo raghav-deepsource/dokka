@@ -14,8 +14,8 @@ dependencies {
     dokkaPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.8.20")
 
     // Will apply the plugin only to the `:dokkaHtml` task
-    //dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.8.20")
+    // dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.8.20")
 
     // Will apply the plugin only to the `:dokkaGfm` task
-    //dokkaGfmPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.8.20")
+    // dokkaGfmPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.8.20")
 }

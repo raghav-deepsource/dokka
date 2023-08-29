@@ -1,5 +1,5 @@
-import org.jetbrains.dokkaVersionType
 import org.jetbrains.DokkaVersionType
+import org.jetbrains.dokkaVersionType
 
 plugins {
     id("ru.vyarus.mkdocs") version "2.3.0"

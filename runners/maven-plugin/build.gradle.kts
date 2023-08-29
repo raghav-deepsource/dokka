@@ -79,7 +79,7 @@ val helpMojo by tasks.registering(Exec::class) {
                 lines.next()
                 // the remaining lines are properties
                 lines.forEach { appendReproducibleNewLine(it) }
-            }
+            },
         )
     }
 }
@@ -94,7 +94,7 @@ val pluginDescriptor by tasks.registering(Exec::class) {
     args(
         "-e",
         "-B",
-        "org.apache.maven.plugins:maven-plugin-plugin:descriptor"
+        "org.apache.maven.plugins:maven-plugin-plugin:descriptor",
     )
 
     outputs.dir(layout.buildDirectory.dir("maven/classes/java/main/META-INF/maven"))
@@ -106,13 +106,14 @@ tasks.jar {
         from(mavenCliSetup.mavenBuildDir.map { it.dir("classes/java/main/META-INF") })
     }
     manifest {
-        attributes("Class-Path" to configurations.runtimeClasspath.map { configuration ->
-            configuration.resolve().joinToString(" ") { it.name }
-        })
+        attributes(
+            "Class-Path" to configurations.runtimeClasspath.map { configuration ->
+                configuration.resolve().joinToString(" ") { it.name }
+            },
+        )
     }
     duplicatesStrategy = DuplicatesStrategy.WARN
 }
-
 
 registerDokkaArtifactPublication("dokkaMavenPlugin") {
     artifactId = "dokka-maven-plugin"
