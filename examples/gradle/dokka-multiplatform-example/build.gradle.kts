@@ -1,7 +1,6 @@
 @file:Suppress("UNUSED_VARIABLE")
 
 import org.jetbrains.dokka.gradle.DokkaTask
-import org.jetbrains.dokka.Platform
 
 plugins {
     kotlin("multiplatform") version "1.8.20"
