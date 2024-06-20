@@ -18,14 +18,20 @@ object CoreExtensions {
     val generation by coreExtensionPoint<Generation>()
     val sourceToDocumentableTranslator by coreExtensionPoint<SourceToDocumentableTranslator>()
     val documentableMerger by coreExtensionPoint<DocumentableMerger>()
-    val documentableTransformer by coreExtensionPoint<DocumentableTransformer>()
+    val documentableTransformer by
+
+        coreExtensionPoint<DocumentableTransformer>()
     val documentableToPageTranslator by coreExtensionPoint<DocumentableToPageTranslator>()
     val pageTransformer by coreExtensionPoint<PageTransformer>()
     val renderer by coreExtensionPoint<Renderer>()
     val postActions by coreExtensionPoint<PostAction>()
 
     private fun <T : Any> coreExtensionPoint() = object {
-        operator fun provideDelegate(thisRef: CoreExtensions, property: KProperty<*>): Lazy<ExtensionPoint<T>> =
+        operator fun provideDelegate(
+
+            thisRef: CoreExtensions,
+            property: KProperty<*>,
+        ): Lazy<ExtensionPoint<T>> =
             lazy { ExtensionPoint(thisRef::class.qualifiedName!!, property.name) }
     }
 }
